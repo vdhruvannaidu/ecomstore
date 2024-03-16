@@ -1,0 +1,97 @@
+src/
+|-- app/
+|   |-- core/                  // Core module (services, interceptors, etc.)
+|   |   |-- services/          // Shared services (e.g., AuthService, ApiService)
+|   |   |-- interceptors/      // HTTP interceptors (e.g., AuthInterceptor)
+|   |   |-- guards/            // Route guards (e.g., AuthGuard)
+|   |   |-- core.module.ts     // Core module definition
+|   |
+|   |-- shared/                // Shared components, directives, pipes, etc.
+|   |   |-- components/        // Shared components (e.g., Navbar, Footer)
+|   |   |-- directives/        // Shared directives
+|   |   |-- pipes/             // Shared pipes
+|   |   |-- shared.module.ts   // Shared module definition
+|   |
+|   |-- modules/
+|   |   |-- shop/              // Shop module (product browsing, search, etc.)
+|   |   |   |-- components/    // Shop components (e.g., ProductList, ProductDetail)
+|   |   |   |-- services/      // Shop services (e.g., ProductService, CartService)
+|   |   |   |-- shop.module.ts // Shop module definition
+|   |   |
+|   |   |-- checkout/          // Checkout module (cart, payment, order)
+|   |   |   |-- components/    // Checkout components (e.g., Cart, PaymentForm)
+|   |   |   |-- services/      // Checkout services (e.g., CartService, OrderService)
+|   |   |   |-- checkout.module.ts // Checkout module definition
+|   |   |
+|   |   |-- auth/              // Authentication module (login, registration)
+|   |   |   |-- components/    // Authentication components (e.g., LoginComponent, RegisterComponent)
+|   |   |   |-- services/      // Authentication services (e.g., AuthService)
+|   |   |   |-- auth.module.ts // Authentication module definition
+|   |   |
+|   |   |-- user/              // User module (profile, orders history)
+|   |   |   |-- components/    // User components (e.g., Profile, OrderHistory)
+|   |   |   |-- services/      // User services (e.g., UserService)
+|   |   |   |-- user.module.ts // User module definition
+|   |   |
+|   |   |-- admin/             // Admin module (manage products, orders, users)
+|   |   |   |-- components/    // Admin components (e.g., ManageProducts, ManageOrders)
+|   |   |   |-- services/      // Admin services (e.g., AdminService)
+|   |   |   |-- admin.module.ts// Admin module definition
+|   |   |
+|   |   |-- ...                // Other feature modules
+|   |
+|   |-- app-routing.module.ts  // Main routing module
+|   |-- app.component.html     // Main component template
+|   |-- app.component.ts       // Main component logic
+|   |-- app.module.ts          // Main module definition
+|   |-- environment.ts         // Environment configuration
+|
+|-- assets/                    // Static assets (images, fonts, etc.)
+|
+|-- environments/              // Environment-specific configurations
+|
+|-- index.html                 // Main HTML file
+|-- styles.scss                // Global styles
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+src/
+|-- app/
+|   |-- core/                  // Core module (services, interceptors, etc.)
+|   |   |-- services/          // Shared services
+|   |   |-- interceptors/      // HTTP interceptors
+|   |   |-- guards/            // Route guards
+|   |   |-- core.module.ts     // Core module definition
+|   |
+|   |-- shared/                // Shared components, directives, pipes, etc.
+|   |   |-- components/        // Shared components
+|   |   |-- directives/        // Shared directives
+|   |   |-- pipes/             // Shared pipes
+|   |   |-- shared.module.ts   // Shared module definition
+|   |
+|   |-- modules/
+|   |   |-- feature1/          // Feature module 1
+|   |   |   |-- components/    // Feature components
+|   |   |   |-- services/      // Feature services
+|   |   |   |-- feature1.module.ts  // Feature module definition
+|   |   |
+|   |   |-- feature2/          // Feature module 2
+|   |   |   |-- components/    // Feature components
+|   |   |   |-- services/      // Feature services
+|   |   |   |-- feature2.module.ts  // Feature module definition
+|   |   |
+|   |   |-- ...                // Other feature modules
+|   |
+|   |-- app-routing.module.ts  // Main routing module
+|   |-- app.component.html     // Main component template
+|   |-- app.component.ts       // Main component logic
+|   |-- app.module.ts          // Main module definition
+|   |-- environment.ts         // Environment configuration
+|
+|-- assets/                    // Static assets (images, fonts, etc.)
+|
+|-- environments/              // Environment-specific configurations
+|
+|-- index.html                 // Main HTML file
+|-- styles.scss                // Global styles
