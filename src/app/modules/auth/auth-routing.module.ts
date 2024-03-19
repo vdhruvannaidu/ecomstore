@@ -9,7 +9,7 @@ const routes: Routes = [
     pathMatch:'full'
     // children: [
     //   {
-    //     path:"login",
+    //     path:"login",  
     //     redirectTo:"/login",
     //     component: LoginComponent,
     //   }
