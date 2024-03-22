@@ -6,16 +6,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    pathMatch:'full'
-    // children: [
-    //   {
-    //     path:"login",  
-    //     redirectTo:"/login",
-    //     component: LoginComponent,
-    //   }
-    // ]
   },
-  // You can add more routes for other authentication-related pages (e.g., signup, forgot password)
 ];
 
 @NgModule({
