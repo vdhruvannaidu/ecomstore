@@ -6,6 +6,8 @@
 /out-tsc
 /bazel-out
 
+nodemon.json
+.env
 # Node
 /node_modules
 npm-debug.log
@@ -40,3 +42,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+migration.sql
+migration_lock.toml
+schema.prisma
