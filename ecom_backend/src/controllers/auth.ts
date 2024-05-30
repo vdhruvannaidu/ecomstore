@@ -8,7 +8,7 @@ import { ErrorCode } from '../exceptions/root';
 import { UnprocessableEntity } from '../exceptions/validation';
 import { signupSchema } from '../schemas/users';
 import { NotFoundException } from '../exceptions/not-found';
-import { error } from 'console';
+
 
 export const signup = async (req: Request, res: Response, next: NextFunction) => {
     signupSchema.parse(req.body)
@@ -42,3 +42,6 @@ export const login = async (req: Request, res: Response) => {
     }, JWT_SECRET)
     res.send({ user, token });
 }
+
+
+//CurrentUser API => Returns  Current Logged in User

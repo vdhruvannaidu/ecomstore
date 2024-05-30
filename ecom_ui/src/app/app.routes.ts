@@ -1,10 +1,8 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { HeaderComponent } from './components/header/header.component';
+
 import { HomelayoutComponent } from './pages/homelayout/homelayout.component';
-// import { ShopComponent } from './modules/store/components/shop/shop.component';
+import { ProductLayoutComponent } from './pages/product-layout/product-layout.component';
+
 
 export const routes: Routes = [
 
@@ -25,6 +23,10 @@ export const routes: Routes = [
     {
         path: 'register',
         loadComponent: () =>import('./components/register/register.component').then(m => m.RegisterComponent),
+    },
+    {
+        path: 'product',
+        component: ProductLayoutComponent,
     }
 
 ];
