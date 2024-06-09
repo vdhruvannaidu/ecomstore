@@ -7,10 +7,6 @@ import { BadRequestsException } from "./exceptions/bad-request"
 export const errorHandler = (method: Function) => {
     return async (req: Request, res: Response, next: NextFunction) => {
         try {
-            // console.log("method print",method);
-            // console.log("Request print",req);
-            // console.log("Response print",res);
-            // console.log("NextFunction print",next);
             await method(req, res, next)
         } catch(error: any) {
             let exception: HttpException;
@@ -18,8 +14,10 @@ export const errorHandler = (method: Function) => {
                 exception = error;
             } else {
                 if( error instanceof ZodError) {
+                    console.log(ZodError);
                     exception = new BadRequestsException('Unprocessable entity.', ErrorCode.UNPROCESSABLE_ENTITY, error)
                 } else {
+                    console.log(error);
                     exception = new InternalException('Something went wrong!', error, ErrorCode.INTERNAL_EXCEPTION)
                 }
             }

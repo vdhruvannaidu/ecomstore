@@ -33,7 +33,8 @@ export const signup = async (req: Request, res: Response, next: NextFunction) =>
 //login controller
 export const login = async (req: Request, res: Response) => {
     const { email, password } = req.body;
-
+    console.log(req.body);
+    
     var user = await prismaClient.user.findFirst({ where: { email } })
     if (!user) {
         throw new NotFoundException('User not found.', ErrorCode.USER_NOT_FOUND)
