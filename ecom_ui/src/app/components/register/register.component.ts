@@ -6,11 +6,10 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Subject, catchError, of, pipe, takeUntil } from 'rxjs';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+    imports: [CommonModule, ReactiveFormsModule],
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
   private authService = inject(AuthService);

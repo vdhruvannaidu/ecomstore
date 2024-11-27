@@ -6,11 +6,10 @@ import { AuthService } from '../../services/auth/auth.service'; // Adjust the pa
 import { takeUntil, Subject, catchError, of } from 'rxjs';
 
 @Component({
-  standalone: true,
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  imports: [CommonModule, ReactiveFormsModule]
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    imports: [CommonModule, ReactiveFormsModule]
 })
 export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;

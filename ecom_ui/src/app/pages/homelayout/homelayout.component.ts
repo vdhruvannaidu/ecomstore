@@ -6,13 +6,10 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 @Component({
-  selector: 'app-homelayout',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, NgxSplideModule, NgScrollbarModule],
- 
-  templateUrl: './homelayout.component.html',
-  styleUrl: './homelayout.component.scss',
-  
+    selector: 'app-homelayout',
+    imports: [HeaderComponent, FooterComponent, NgxSplideModule, NgScrollbarModule],
+    templateUrl: './homelayout.component.html',
+    styleUrl: './homelayout.component.scss'
 })
 export class HomelayoutComponent {
 
