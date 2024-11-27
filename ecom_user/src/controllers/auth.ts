@@ -26,7 +26,7 @@ export const signup = async (req: Request, res: Response, next: NextFunction) =>
             password: hashSync(password, 10)
         }
     })
-    res.json(user)
+    res.json(user);
 
 }
 

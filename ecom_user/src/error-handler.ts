@@ -14,7 +14,7 @@ export const errorHandler = (method: Function) => {
                 exception = error;
             } else {
                 if( error instanceof ZodError) {
-                    console.log(ZodError);
+                    console.log("error found",ZodError);
                     exception = new BadRequestsException('Unprocessable entity.', ErrorCode.UNPROCESSABLE_ENTITY, error)
                 } else {
                     console.log(error);
@@ -23,6 +23,5 @@ export const errorHandler = (method: Function) => {
             }
             next(exception)
         }
-
     }
 }

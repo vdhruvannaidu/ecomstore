@@ -16,7 +16,8 @@ module.exports = {
   plugins: [require("daisyui", "@tailwindcss/aspect-ratio")],
   daisyui: {
 
-    theme: ['winter'],
+    // theme: ['winter'],
+    themes: ["light", "dark", "cupcake"],
     // theme: [{
     //   mytheme: {
     //     "primary": "#1d4ed8",

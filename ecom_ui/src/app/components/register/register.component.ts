@@ -2,8 +2,8 @@ import { Component, inject, signal, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
-import { Subject, catchError, of, takeUntil } from 'rxjs';
+import { AuthService } from '../../services/auth/auth.service';
+import { Subject, catchError, of, pipe, takeUntil } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -25,7 +25,7 @@ export class RegisterComponent {
 
   constructor() {
     this.registerForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
@@ -41,7 +41,7 @@ export class RegisterComponent {
       this.error.set(null);
       console.log("this.registerForm.value",this.registerForm.value)
 
-      this.authService.register("dhruvan","dhruvan@gmail.com", "123456789")
+      this.authService.register(this.registerForm.value)
         .pipe(
           takeUntil(this.destroy$),
           catchError(err => {
@@ -51,7 +51,7 @@ export class RegisterComponent {
           })
         )
         .subscribe({
-          next: (response) => {
+          next: (response:any) => {
             if (response) {
               this.router.navigate(['/']);
             }

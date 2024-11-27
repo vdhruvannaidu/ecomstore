@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../services/auth.service'; // Adjust the path as necessary
+import { AuthService } from '../../services/auth/auth.service'; // Adjust the path as necessary
 import { takeUntil, Subject, catchError, of } from 'rxjs';
 
 @Component({
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         )
         .subscribe(response => {
           if (response) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/shop']);
           }
           this.isLoading = false;
         });

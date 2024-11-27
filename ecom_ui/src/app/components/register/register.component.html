@@ -9,20 +9,20 @@
         
         <div>
           <div class="relative mt-2 w-full">
-            <input type="text" formControlName="username" id="username"
+            <input type="text" formControlName="name" id="name"
               [ngClass]="{
-                'border-green-600': registerForm.controls['username'].valid && registerForm.controls['username'].touched,
-                'border-red-600': registerForm.controls['username'].invalid && registerForm.controls['username'].touched
+                'border-green-600': registerForm.controls['name'].valid && registerForm.controls['name'].touched,
+                'border-red-600': registerForm.controls['name'].invalid && registerForm.controls['name'].touched
               }"
               class="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pt-4 pb-2.5 text-sm text-gray-900 focus:outline-none focus:ring-0" placeholder=" " />
-            <label for="username" class="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm duration-300">Enter Your Username</label>
-            @if (registerForm.controls['username'].invalid && registerForm.controls['username'].touched) {
+            <label for="name" class="origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 absolute left-1 top-2 z-10 -translate-y-4 scale-75 transform cursor-text select-none bg-white px-2 text-sm duration-300">Enter Your name</label>
+            @if (registerForm.controls['name'].invalid && registerForm.controls['name'].touched) {
               <div class="text-red-500 text-sm">
-                @if (registerForm.controls['username'].errors?.['required']) {
-                  Username is required.
+                @if (registerForm.controls['name'].errors?.['required']) {
+                  name is required.
                 }
-                @if (registerForm.controls['username'].errors?.['minlength']) {
-                  Username must be at least 3 characters.
+                @if (registerForm.controls['name'].errors?.['minlength']) {
+                  name must be at least 3 characters.
                 }
               </div>
             }
