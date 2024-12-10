@@ -7,15 +7,10 @@ import { AuthService } from './services/auth/auth.service';
 import { AuthRedirectGuard } from './auth/authRedirect.guard';
 
 export const routes: Routes = [
-  // { path: '', component: LoginComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'shop', component: HomelayoutComponent, canActivate: [AuthGuard] },  // Protected route
-  // { path: 'header', loadComponent: () => import('./components/header/header.component').then(m => m.HeaderComponent), canActivate: [AuthGuard] },  // Protected route
-  // { path: 'register', loadComponent: () => import('./components/register/register.component').then(m => m.RegisterComponent) },
-  // { path: 'product', component: ProductLayoutComponent, canActivate: [AuthGuard] }  // Protected route
   {
     path: '',
-    canActivate: [AuthRedirectGuard],
+    component: HomelayoutComponent,
+    // canActivate: [AuthRedirectGuard],
     children: [],
   },
   {
@@ -23,9 +18,14 @@ export const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'product',
+    component: ProductLayoutComponent,
+    // canActivate: [AuthGuard], // Protected route
+  },
+  {
     path: 'shop',
     component: HomelayoutComponent,
-    canActivate: [AuthGuard], // Protected route
+    // canActivate: [AuthGuard], // Protected route
     children: [
       {
         path: 'header',
@@ -38,7 +38,7 @@ export const routes: Routes = [
       {
         path: 'product',
         component: ProductLayoutComponent,
-        canActivate: [AuthGuard], // Protected route
+        // canActivate: [AuthGuard], // Protected route
       },
     ],
   },

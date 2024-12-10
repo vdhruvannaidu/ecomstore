@@ -6,3 +6,59 @@
 .font-syne-700 {
     font-family: 'syne';
 }
+
+
+.product-slider {
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  
+    .product-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+  
+      .product-info {
+        margin-top: 1rem;
+  
+        .product-name {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+  
+        .price {
+          .old-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 0.5rem;
+          }
+  
+          .new-price {
+            color: #e60023;
+            font-weight: bold;
+          }
+        }
+  
+        .rating {
+          margin: 0.5rem 0;
+          color: #f39c12;
+        }
+  
+        .feature {
+          color: #555;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+  
